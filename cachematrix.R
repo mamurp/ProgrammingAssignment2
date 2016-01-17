@@ -8,13 +8,13 @@
 ## in the cache for later inversion
 
 makeCacheMatrix <- function (x=matrix()) {
-  m <- NULL
+  m <- NULL  ##initialize m to null
   setmat <- function (y)  {
     
-    x <<- y
+    x <<- y ## assignment of y from another environment to x 
     m<<-NULL
   }
-  getmat <- function () x
+  getmat <- function () x  ## function to assign x to getmat
   setmatinvert <- function (solve)  m <<- solve  ##function inverts matrix
   getmatinvert <- function() m                   ##retrieves inversion
   list(setmat = setmat,
